@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class AngleActivation : MonoBehaviour
 {
-    public GameObject targetObject; // È°¼ºÈ­/ºñÈ°¼ºÈ­ÇÒ ´ë»ó ¿ÀºêÁ§Æ®
-    public float angleThreshold; // '°¢µµÀÔ°èÁ¡' º¯¼ö
+    public GameObject targetObject; // í™œì„±í™”/ë¹„í™œì„±í™”í•  ëŒ€ìƒ ì˜¤ë¸Œì íŠ¸
+    public float angleThreshold; // 'ê°ë„ìž…ê³„ì ' ë³€ìˆ˜,,
 
     void Update()
     {
@@ -18,26 +18,26 @@ public class AngleActivation : MonoBehaviour
             return;
         }
 
-        // ÀÚ½ÅÀÇ ÇöÀç È¸Àü °ª (À½¼ö Ã³¸® Æ÷ÇÔ)
+        // ìžì‹ ì˜ í˜„ìž¬ íšŒì „ ê°’ (ìŒìˆ˜ ì²˜ë¦¬ í¬í•¨)
         float xRotation = transform.eulerAngles.x;
         float zRotation = transform.eulerAngles.z;
 
-        // °¢µµ Á¶°Ç È®ÀÎ
+        // ê°ë„ ì¡°ê±´ í™•ì¸
         if ((xRotation > angleThreshold && xRotation < 360 - angleThreshold)|| (zRotation > angleThreshold && zRotation < 360 - angleThreshold))
         {
-            // °¢µµ°¡ ±âÁØÀ» ÃÊ°úÇÏ¸é È°¼ºÈ­
+            // ê°ë„ê°€ ê¸°ì¤€ì„ ì´ˆê³¼í•˜ë©´ í™œì„±í™”
             if (!targetObject.activeSelf)
             {
-                targetObject.SetActive(true); // È°¼ºÈ­
+                targetObject.SetActive(true); // í™œì„±í™”
                 Debug.Log($"Activated {targetObject.name}: x={xRotation}, z={zRotation}");
             }
         }
         else
         {
-            // °¢µµ°¡ ±âÁØ ÀÌÇÏ·Î ³»·Á°¡¸é ºñÈ°¼ºÈ­
+            // ê°ë„ê°€ ê¸°ì¤€ ì´í•˜ë¡œ ë‚´ë ¤ê°€ë©´ ë¹„í™œì„±í™”
             if (targetObject.activeSelf)
             {
-                targetObject.SetActive(false); // ºñÈ°¼ºÈ­
+                targetObject.SetActive(false); // ë¹„í™œì„±í™”
                 Debug.Log($"Deactivated {targetObject.name}: x={xRotation}, z={zRotation}");
             }
         }
