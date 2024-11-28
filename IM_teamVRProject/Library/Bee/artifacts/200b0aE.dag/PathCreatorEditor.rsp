@@ -355,10 +355,10 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.44f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.44f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
-"Assets/PathCreator/Core/Editor/Helper/MouseUtility.cs"
-"Assets/PathCreator/Core/Editor/Helper/PathHandle.cs"
-"Assets/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs"
-"Assets/PathCreator/Core/Editor/PathEditor.cs"
+"Assets/DownloadAsset/PathCreator/Core/Editor/Helper/MouseUtility.cs"
+"Assets/DownloadAsset/PathCreator/Core/Editor/Helper/PathHandle.cs"
+"Assets/DownloadAsset/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs"
+"Assets/DownloadAsset/PathCreator/Core/Editor/PathEditor.cs"
 -langversion:9.0
 /deterministic
 /optimize+
